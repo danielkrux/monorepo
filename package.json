@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "yarn install; lerna bootstrap;",
+    "start": "lerna run start --parallel",
+    "start:client": "node node_modules/.bin/lerna run --scope client --stream dev",
+    "build:client": "node node_modules/.bin/lerna run --scope client --stream build",
+    "run:build:client": "lerna run start --scope client"
+  }
+}

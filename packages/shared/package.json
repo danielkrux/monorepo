@@ -1,0 +1,22 @@
+{
+  "name": "@monorepo/shared",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "danielkrux <daniel.krux@trifork.nl>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37"
+  }
+}
