@@ -10,8 +10,12 @@
   "scripts": {
     "bootstrap": "yarn install; lerna bootstrap;",
     "start": "lerna run start --parallel",
-    "start:client": "node node_modules/.bin/lerna run --scope client --stream dev",
-    "build:client": "node node_modules/.bin/lerna run --scope client --stream build",
-    "run:build:client": "lerna run start --scope client"
+    "dev": "lerna run dev --parallel",
+    "dev:client": "lerna run dev --scope client --stream",
+    "dev:admin": "lerna run dev --scope admin --stream",
+    "build:client": "lerna run build --scope client --stream",
+    "start:client": "lerna run start --scope client --stream",
+    "dev:shared": "lerna run dev --scope shared --stream",
+    "build:shared": "lerna run build --scope shared --stream"
   }
 }
