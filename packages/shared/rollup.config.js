@@ -8,10 +8,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
-import visualizer from 'rollup-plugin-visualizer';
-import { terser } from 'rollup-plugin-terser';
-import copy from 'rollup-plugin-copy';
+// import { terser } from 'rollup-plugin-terser';
 import svgr from '@svgr/rollup';
+import visualizer from 'rollup-plugin-visualizer';
+// import copy from 'rollup-plugin-copy';
 
 const packageJson = require('./package.json');
 
@@ -46,24 +46,24 @@ export default defineConfig({
       extract: 'styles/components.css',
       minimize: true,
     }),
-    copy({
-      targets: [
-        {
-          src: './src/assets/fonts',
-          dest: 'dist/assets',
-        },
-        {
-          src: './src/styles/*.scss',
-          dest: 'dist/styles',
-        },
-        {
-          src: './src/styles/index.scss',
-          dest: 'dist/styles',
-          transform: (contents) => contents.toString().replace('// ', ''),
-        },
-      ],
-    }),
-    terser(),
+    // copy({
+    //   targets: [
+    //     {
+    //       src: './src/assets/fonts',
+    //       dest: 'dist/assets',
+    //     },
+    //     {
+    //       src: './src/styles/*.scss',
+    //       dest: 'dist/styles',
+    //     },
+    //     {
+    //       src: './src/styles/index.scss',
+    //       dest: 'dist/styles',
+    //       transform: (contents) => contents.toString().replace('// ', ''),
+    //     },
+    //   ],
+    // }),
+    // terser(),
     visualizer({
       filename: 'bundle-analysis.html',
     }),

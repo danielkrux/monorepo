@@ -1,9 +1,6 @@
 {
   "name": "root",
   "private": true,
-  "devDependencies": {
-    "lerna": "^4.0.0"
-  },
   "workspaces": [
     "packages/*"
   ],
@@ -13,9 +10,9 @@
     "dev": "lerna run dev --parallel",
     "dev:client": "lerna run dev --scope client --stream",
     "dev:admin": "lerna run dev --scope admin --stream",
+    "dev:shared": "lerna run dev --scope @monorepo/shared --stream",
     "build:client": "lerna run build --scope client --stream",
     "start:client": "lerna run start --scope client --stream",
-    "dev:shared": "lerna run dev --scope shared --stream",
     "build:shared": "lerna run build --scope shared --stream"
   }
 }

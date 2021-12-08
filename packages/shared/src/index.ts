@@ -1,3 +1,1 @@
-import useCounter from './hooks/useCounter';
-
-export { useCounter };
+export { default as useCounter } from './hooks/useCounter';
